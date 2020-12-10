@@ -1,0 +1,5 @@
+name: 'Do whatever you want Action'
+description: 'Custom the action logic your self'
+runs:
+  using: 'node12'
+  main: './dist/actions.diy.umd.js'
