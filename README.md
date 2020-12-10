@@ -11,10 +11,10 @@ You can use this action after any other action. Here is an example setup of this
 
 ```yml
 on: push
-name: Do whatever you want Action
+name: Do it yourself action
 jobs:
-  Diy:
-    name: Do whatever you want Action
+  DIY:
+    name: Start
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -23,10 +23,10 @@ jobs:
       uses: echoings/actions.diy@main
 ```
 
-3. Create a `.echo.actions.diy.js` file in your root project, which is export an async function definition as follow, then **You can handle notify yourself**
+3. Create a `.echo.actions.diy.js` file in your root project, which is export an async function definition as follow, then **You can handle action logic yourself**
 
 ```Typescript
-module.exports = async function notify(
+module.exports = async function DIY(
   _ctx: github.context (@actions/github),
   _envs: process.env,
   _axios: Axios,
@@ -37,4 +37,5 @@ module.exports = async function notify(
   msg: string
 }
 ```
+
 `Tips: ` If you need more extra dependency package, please do and use [ncc](https://github.com/vercel/ncc#readme) to bundle them together.

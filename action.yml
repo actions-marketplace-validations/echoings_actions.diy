@@ -1,5 +1,5 @@
-name: 'Do whatever you want Action'
-description: 'Custom the action logic your self'
+name: 'Do it yourself action'
+description: 'Custom the action logic yourself'
 runs:
   using: 'node12'
   main: './dist/actions.diy.umd.js'
