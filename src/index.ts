@@ -7,7 +7,7 @@ import * as glob from '@actions/glob';
 import * as io from '@actions/io';
 import * as toolCache from '@actions/tool-cache';
 import axios from 'axios';
-import path from 'path'
+import path from 'path';
 import DIY from './diy';
 
 async function run(): Promise<void> {

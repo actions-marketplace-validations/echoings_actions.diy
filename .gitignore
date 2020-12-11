@@ -1,5 +1,6 @@
 # compile files
 src/**.js
+*.tbuildinfo
 
 # normal folder
 node_modules
