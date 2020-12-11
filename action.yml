@@ -2,4 +2,4 @@ name: 'Do it yourself action'
 description: 'Custom the action logic yourself'
 runs:
   using: 'node12'
-  main: './dist/actions.diy.umd.js'
+  main: './dist/main/index.js'

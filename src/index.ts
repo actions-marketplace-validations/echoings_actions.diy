@@ -1,18 +1,42 @@
-import core from '@actions/core'
-import github from '@actions/github'
-import axios from 'axios'
+import * as core from '@actions/core';
+import * as github from '@actions/github';
+import * as exec from '@actions/exec';
+import * as cache from '@actions/cache';
+import * as artifact from '@actions/artifact';
+import * as glob from '@actions/glob';
+import * as io from '@actions/io';
+import * as toolCache from '@actions/tool-cache';
+import axios from 'axios';
 import path from 'path'
+import DIY from './diy';
 
-async function run() {
+async function run(): Promise<void> {
   try {
-    const { GITHUB_WORKSPACE: sourceDir = '' } = process.env
-    const actionFn = require(path.join(sourceDir, '.echo.actions.diy.js'))
-    const msg = await actionFn.call(null, github.context, process.env, axios, core)
+    const diy = new DIY(github.context);
+    const { GITHUB_WORKSPACE: sourceDir = '' } = process.env;
+    const actionFn = require(path.join(sourceDir, '.echo.actions.diy.js'));
+    const msg = await actionFn.call(
+      diy,
+      {
+        envs: process.env,
+      },
+      {
+        axios,
+        core,
+        github,
+        exec,
+        glob,
+        cache,
+        io,
+        toolCache,
+        artifact,
+      }
+    );
 
-    core.setOutput('msg', `${new Date() + ': ' + msg}`)
+    core.setOutput('msg', `${new Date() + ': ' + msg}`);
   } catch (error) {
-    core.setFailed(error)
+    core.setFailed(error);
   }
 }
 
-void run()
+void run();

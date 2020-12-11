@@ -1,13 +1,10 @@
-node_modules
-coverage
+.idea/*
 .nyc_output
-.DS_Store
-*.log
-.vscode
-.idea
+build
 # dist
-dist/*.map
-compiled
-.awcache
-.rpt2_cache
-docs
+node_modules
+test
+src/**.js
+coverage
+*.log
+package-lock.json
