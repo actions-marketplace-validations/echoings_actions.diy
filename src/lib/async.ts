@@ -20,9 +20,9 @@
 export const asyncABC = async () => {
   const somethingSlow = (index: 0 | 1 | 2) => {
     const storage = 'abc'.charAt(index);
-    return new Promise<string>((resolve) =>
+    return new Promise<string>(resolve =>
       // later...
-      resolve(storage)
+      resolve(storage),
     );
   };
   const a = await somethingSlow(0);
