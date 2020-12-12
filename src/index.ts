@@ -38,7 +38,7 @@ async function run(): Promise<void> {
 
     core.setOutput('msg', `${new Date() + ': ' + msg}`);
   } catch (error) {
-    core.setFailed(error);
+    core.setFailed(error
   }
 }
 
