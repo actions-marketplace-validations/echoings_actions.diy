@@ -23,12 +23,13 @@ jobs:
       uses: echoings/actions.diy@main
 ```
 
-3. Create a `.echo.actions.diy.js` file in your root project, which is export an async function definition as follow, then **You can handle action logic yourself**
+3. Create a `.echo.actions.diy.js` file in your root project, and export an async function which's definition as follow, then **You can handle action logic yourself**
 
 ```Typescript
 module.exports = async function DIY(
   options: {
-    envs: process.env
+    envs: process.env,
+    ctx: github.context
   },
   utils: {
     core: '@actions/core';
