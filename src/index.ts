@@ -22,6 +22,7 @@ async function run(): Promise<void> {
       diy,
       {
         envs: process.env,
+        ctx: github.context,
       },
       {
         axios,

@@ -32,15 +32,15 @@ module.exports = async function DIY(
     ctx: github.context
   },
   utils: {
-    core: '@actions/core';
-    github: '@actions/github';
-    exec: '@actions/exec';
-    cache: '@actions/cache';
-    artifact: '@actions/artifact';
-    glob: '@actions/glob';
-    io: '@actions/io';
-    toolCache: '@actions/tool-cache';
-    axios: 'axios';
+    axios: 'axios',
+    core: '@actions/core',
+    github: '@actions/github',
+    exec: '@actions/exec',
+    cache: '@actions/cache',
+    artifact: '@actions/artifact',
+    glob: '@actions/glob',
+    io: '@actions/io',
+    toolCache: '@actions/tool-cache'
   }
 ): {
   code?: number,

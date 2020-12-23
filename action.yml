@@ -1,5 +1,8 @@
-name: 'Do it yourself action'
+name: 'DIY actions'
 description: 'Custom the action logic yourself'
+branding:
+  icon: box
+  color: green
 runs:
   using: 'node12'
   main: './dist/main/index.js'
