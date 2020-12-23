@@ -20,7 +20,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Do it yourself
-      uses: echoings/actions.diy@main
+      uses: echoings/actions.diy@v0.1.0
 ```
 
 3. Create a `.echo.actions.diy.js` file in your root project, and export an async function which's definition as follow, then **You can handle action logic yourself**
