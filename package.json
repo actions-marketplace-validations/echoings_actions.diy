@@ -51,6 +51,7 @@
     "@actions/io": "^1.0.2",
     "@actions/tool-cache": "^1.6.1",
     "axios": "^0.21.0",
+    "form-data": "^3.0.0",
     "fs-extra": "^9.0.1"
   },
   "devDependencies": {

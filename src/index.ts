@@ -9,6 +9,7 @@ import * as glob from '@actions/glob';
 import * as io from '@actions/io';
 import * as toolCache from '@actions/tool-cache';
 import axios from 'axios';
+import FormData from 'form-data';
 import fs from 'fs-extra';
 
 import DIY from './diy';
@@ -27,6 +28,7 @@ async function run(): Promise<void> {
       },
       {
         axios,
+        FormData,
         core,
         github,
         fs,
