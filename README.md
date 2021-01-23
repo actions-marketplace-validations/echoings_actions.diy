@@ -1,6 +1,6 @@
 # actions.diy
 
-A [GitHub Action](https://github.com/features/actions) to let you custom your action logic
+A [GitHub Action](https://github.com/features/actions) to let you custom your action logic. It's like you can't do anything with it directly but you can do anything with it.(For me, I often use it to verify my prototype, then pub a official version if prototype works.)
 
 ## Usage
 
